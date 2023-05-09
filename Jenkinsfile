@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('initnew1') {
             steps {
-                sh '''#!/bin/bash
+                sh '''#!/bin/zsh
                    eval "$(/opt/homebrew/bin/brew shellenv)"
+                   terraform init
                    '''
             }
         }
