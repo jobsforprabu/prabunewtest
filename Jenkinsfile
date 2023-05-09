@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('initnew1') {
             steps {
-                zsh 'echo "eval "$(/opt/homebrew/bin/brew shellenv)"" >> /Users/pganesh/.zprofile'
-                zsh 'eval "$(/opt/homebrew/bin/brew shellenv)"'
-                zsh "terraform init"
+                sh '#!/bin/zsh echo "eval "$(/opt/homebrew/bin/brew shellenv)"" >> /Users/pganesh/.zprofile'
+                sh '#!/bin/zsh eval "$(/opt/homebrew/bin/brew shellenv)"'
+                sh "#!/bin/zsh terraform init"
             }
         }
     }
