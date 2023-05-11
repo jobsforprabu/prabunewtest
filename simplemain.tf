@@ -4,8 +4,6 @@ provider "aws" {
     secret_key = "arvhWwF8A00Nr0z+J4fONvenU5DsBJ7WSlpTliZo" 
 }
 
-
-
 resource "aws_vpc" "myprabu" {
     cidr_block = "10.0.0.0/16"
     instance_tenancy = "default"
@@ -14,3 +12,4 @@ resource "aws_vpc" "myprabu" {
     }
   
 }
+
